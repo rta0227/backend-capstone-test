@@ -3,7 +3,6 @@ const path = require("path");
 
 const loadModel = async () => {
   if (!model) {
-    console.log("Loading model from:", modelPath);
     model = await tf.loadLayersModel(process.env.MODEL_URL);
     console.log("Model loaded successfully.");
   }
