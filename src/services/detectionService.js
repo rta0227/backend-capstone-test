@@ -1,14 +1,6 @@
 const tf = require("@tensorflow/tfjs-node");
 const path = require("path");
 
-const loadModel = async () => {
-  if (!model) {
-    model = await tf.loadLayersModel(process.env.MODEL_URL);
-    console.log("Model loaded successfully.");
-  }
-  return model;
-};
-
 const predictDisease = async (file) => {
   try {
     const model = await loadModel();
